@@ -1,0 +1,29 @@
+settings = {
+	orientation = { 
+		default = "landscapeRight",
+		supported = {"landscapeRight", "landscapeLeft"},
+	},
+	
+	iphone = {
+		plist = {
+			-- this app was submitted with Icon.png instead of Icon57.png, and was still 57x57
+			-- renamed support Android, so Icon.png is now 72x72
+			CFBundleIconFile = "Icon57.png",
+			CFBundleIconFiles = {
+				"Icon57.png" ,
+				"Icon@2x.png" ,
+				"Icon-72.png" 
+			},
+		},
+	},
+	
+	android = {
+		usesPermissions = {
+			"com.android.vending.BILLING",
+			"android.permission.INTERNET",
+			"android.permission.ACCESS_WIFI_STATE",
+			"android.permission.ACCESS_NETWORK_STATE",
+			"android.permission.READ_PHONE_STATE",
+		},
+	},
+}
